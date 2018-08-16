@@ -10,6 +10,8 @@
 // +----------------------------------------------------------------------
 namespace app\index\controller;
 use app\common\controller\Common;
+use think\cache\driver\Redis;
+
 
 use think\DB;
 /**
@@ -29,8 +31,15 @@ class Index extends Common
              //测试Sqlservel链接
              //$test1=Db::connect("db_sqlServer")->name("accountsinfo")->select();
              //测试oracle链接
-             //$test1=Db::connect("db_sqlServer")->name("accountsinfo")->select();
-             echo phpinfo();
+             //$test2=Db::connect("db_Oracle")->name("accountsinfo")->select();
+
             return $this->fetch();
+    }
+
+    public function testRedis(){
+        $redis = new Redis();
+        var_dump($redis);exit;
+        $redis->set('test','hello redis');
+        echo $redis->get('test');
     }
 }
