@@ -1,0 +1,8 @@
+---------------------------------------------------------------
+[ 2018-08-16T09:21:35+08:00 ] 192.168.1.174 GET /
+[ info ] test.waibao.com/ [运行时间：0.831048s][吞吐率：1.20req/s] [内存消耗：4,061.07kb] [文件加载：70]
+[ error ] [28000]SQLSTATE[28000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]用户 'sa' 登录失败。[C:\xampp\htdocs\LotusAdmin\thinkphp\library\think\db\Connection.php:295]
+---------------------------------------------------------------
+[ 2018-08-16T09:23:41+08:00 ] 192.168.1.174 GET /
+[ info ] test.waibao.com/ [运行时间：0.945054s][吞吐率：1.06req/s] [内存消耗：4,084.84kb] [文件加载：73]
+[ error ] [10501]SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 11.0][SQL Server]对象名 'accounts_info' 无效。[C:\xampp\htdocs\LotusAdmin\thinkphp\library\think\db\Connection.php:390]
