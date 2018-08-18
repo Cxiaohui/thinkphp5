@@ -12,6 +12,7 @@ namespace app\admin\controller;
 
 use app\common\model\AdminMember as MemberModel;
 use app\common\model\AdminMemberLevel as LevelModel;
+use think\DB;
 /**
  * 会员管理控制器
  * @package app\admin\controller
@@ -28,16 +29,14 @@ class Member extends Admin
     {
         $map = [];
         if ($q) {
-            if (preg_match("/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/", $q)) {// 邮箱
-                $map['email'] = $q;
-            } elseif (preg_match("/^1\d{10}$/", $q)) {// 手机号
-                $map['mobile'] = $q;
+            if (is_numeric( $q ) ) {
+                $map['GameID'] = $q;
             } else {// 用户名、昵称
-                $map['username'] = ['like', '%'.$q.'%'];
+                $map['NickName'] = ['like', '%'.$q.'%'];
             }
         }
-        
-        $data_list = MemberModel::where($map)->paginate(10, false, ['query' => input('get.')]);
+        $data_list = Db::connect("db_sqlServer")->name("accountsinfo")->where($map)->paginate(10);
+         //echo Db::connect("db_sqlServer")->getLastSql();
         // 分页
         $pages = $data_list->render();
         $this->assign('data_list', $data_list);
@@ -45,9 +44,37 @@ class Member extends Admin
         return $this->fetch();
     }
 
+
+    /**
+     * 代理管理
+     *
+     * @return mixed
+     */
+    public function level($q='')
+    {
+
+        $map = [];
+        if ($q) {
+            if (is_numeric( $q ) ) {
+                $map['GameID'] = $q;
+            } else {// 用户名、昵称
+                $map['NickName'] = ['like', '%'.$q.'%'];
+            }
+        }
+        $data_list = Db::connect("db_sqlServer")->name("accountsagent")->where($map)->paginate(10);
+        //echo Db::connect("db_sqlServer")->getLastSql();
+        // 分页
+        $pages = $data_list->render();
+        $this->assign('data_list', $data_list);
+        $this->assign('pages', $pages);
+        return $this->fetch();
+
+    }
+
+
     /**
      * 添加会员
-     * @author 橘子俊 <364666827@qq.com>
+ @author 橘子俊 <364666827@qq.com>
      * @return mixed
      */
     public function add()
@@ -147,24 +174,7 @@ class Member extends Admin
     // | 会员等级
     // +----------------------------------------------------------------------
 
-    /**
-     * 会员等级列表
-     * @author 橘子俊 <364666827@qq.com>
-     * @return mixed
-     */
-    public function level()
-    {
-        if ($this->request->isAjax()) {
-            $data = [];
-            $data['data'] = LevelModel::select();
-            $data['count'] = 0;
-            $data['code'] = 0;
-            $data['msg'] = '';
-            return json($data);
-        }
 
-        return $this->fetch();
-    }
 
     /**
      * 添加会员等级
