@@ -84,7 +84,7 @@ class Api extends Common
     {
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_URL, $url);
-        curl_setopt($curl, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']); //在HTTP请求中包含一个"User-Agent: "头的字符串。
+        curl_setopt($curl, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']); //在HTTP请求中包含一个"User-agent: "头的字符串。
         curl_setopt($curl, CURLOPT_HEADER, 0); //启用时会将头文件的信息作为数据流输出。
         curl_setopt($curl, CURLOPT_POST, true); //发送一个常规的Post请求
         curl_setopt($curl, CURLOPT_POSTFIELDS, $data);//Post提交的数据包

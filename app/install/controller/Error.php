@@ -211,7 +211,7 @@ INFO;
         file_put_contents(APP_PATH.'extra/hs_auth.php', $hs_auth);
         // 获取站点根目录
         $root_dir = request()->baseFile();
-        $root_dir  = preg_replace(['/Index.php$/'], [''], $root_dir);
+        $root_dir  = preg_replace(['/Index.html$/'], [''], $root_dir);
         return $this->success('系统安装成功，欢迎您使用HisiPHP开源框架', $root_dir.'admin.php');
     }
     

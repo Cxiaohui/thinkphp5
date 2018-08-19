@@ -2,3 +2,75 @@
 [ 2018-08-19T09:55:00+08:00 ] 192.168.1.174 GET /admin.php/admin/notice/index
 [ info ] test.waibao.com/admin.php/admin/notice/index [运行时间：0.800046s][吞吐率：1.25req/s] [内存消耗：4,863.39kb] [文件加载：84]
 [ error ] [28000]SQLSTATE[28000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]用户 'sa' 登录失败。[C:\xampp\htdocs\thinkphp5\thinkphp\library\think\db\Connection.php:295]
+---------------------------------------------------------------
+[ 2018-08-19T10:00:57+08:00 ] 192.168.1.174 GET /admin.php/admin/payconfig/index
+[ info ] test.waibao.com/admin.php/admin/payconfig/index [运行时间：1.037059s][吞吐率：0.96req/s] [内存消耗：4,930.25kb] [文件加载：86]
+[ error ] [0]模板文件不存在:C:\xampp\htdocs\thinkphp5/app/admin\view\payconfig\index.php[C:\xampp\htdocs\thinkphp5\thinkphp\library\think\view\driver\Think.php:82]
+---------------------------------------------------------------
+[ 2018-08-19T10:14:27+08:00 ] 192.168.1.174 GET /admin.php/admin/payconfig/index
+[ info ] test.waibao.com/admin.php/admin/payconfig/index [运行时间：1.201069s][吞吐率：0.83req/s] [内存消耗：4,866.29kb] [文件加载：87]
+[ error ] [10501]SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 11.0][SQL Server]对象名 'pay_config' 无效。[C:\xampp\htdocs\thinkphp5\thinkphp\library\think\db\Connection.php:390]
+---------------------------------------------------------------
+[ 2018-08-19T10:14:51+08:00 ] 192.168.1.174 GET /admin.php/admin/payconfig/index
+[ info ] test.waibao.com/admin.php/admin/payconfig/index [运行时间：0.950055s][吞吐率：1.05req/s] [内存消耗：4,866.32kb] [文件加载：87]
+[ error ] [10501]SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 11.0][SQL Server]对象名 'payconfig' 无效。[C:\xampp\htdocs\thinkphp5\thinkphp\library\think\db\Connection.php:390]
+---------------------------------------------------------------
+[ 2018-08-19T10:16:44+08:00 ] 192.168.1.174 GET /admin.php/admin/payconfig/add.html
+[ info ] test.waibao.com/admin.php/admin/payconfig/add.html [运行时间：0.786045s][吞吐率：1.27req/s] [内存消耗：4,731.74kb] [文件加载：80]
+[ error ] [0]模板文件不存在:C:\xampp\htdocs\thinkphp5/app/admin\view\payconfig\form.php[C:\xampp\htdocs\thinkphp5\thinkphp\library\think\view\driver\Think.php:82]
+---------------------------------------------------------------
+[ 2018-08-19T10:30:19+08:00 ] 192.168.1.174 GET /admin.php/admin/payconfig/add/ID/1.html
+[ info ] test.waibao.com/admin.php/admin/payconfig/add/ID/1.html [运行时间：0.951055s][吞吐率：1.05req/s] [内存消耗：4,892.07kb] [文件加载：85]
+[ error ] [8]未定义数组索引: Subject[C:\xampp\htdocs\thinkphp5\runtime\temp\21e934f1d944b0a2e7cfb4b6cfe0084a.php:316]
+---------------------------------------------------------------
+[ 2018-08-19T10:37:25+08:00 ] 192.168.1.174 GET /admin.php/admin/payconfig/add.html
+[ info ] test.waibao.com/admin.php/admin/payconfig/add.html [运行时间：0.892051s][吞吐率：1.12req/s] [内存消耗：5,081.48kb] [文件加载：87]
+[ error ] [8]Trying to get property of non-object[C:\xampp\htdocs\thinkphp5\runtime\temp\21e934f1d944b0a2e7cfb4b6cfe0084a.php:353]
+---------------------------------------------------------------
+[ 2018-08-19T10:38:07+08:00 ] 192.168.1.174 POST /admin.php/admin/payconfig/add.html
+[ info ] test.waibao.com/admin.php/admin/payconfig/add.html [运行时间：1.013057s][吞吐率：0.99req/s] [内存消耗：4,455.65kb] [文件加载：77]
+[ error ] [0]缺少更新条件[C:\xampp\htdocs\thinkphp5\thinkphp\library\think\db\Query.php:2366]
+---------------------------------------------------------------
+[ 2018-08-19T10:41:49+08:00 ] 192.168.1.174 POST /admin.php/admin/payconfig/add.html
+[ info ] test.waibao.com/admin.php/admin/payconfig/add.html [运行时间：0.993057s][吞吐率：1.01req/s] [内存消耗：4,460.43kb] [文件加载：77]
+[ error ] [0]缺少更新条件[C:\xampp\htdocs\thinkphp5\thinkphp\library\think\db\Query.php:2366]
+---------------------------------------------------------------
+[ 2018-08-19T10:43:14+08:00 ] 192.168.1.174 POST /admin.php/admin/payconfig/add.html
+[ info ] test.waibao.com/admin.php/admin/payconfig/add.html [运行时间：1.021059s][吞吐率：0.98req/s] [内存消耗：4,460.43kb] [文件加载：77]
+[ error ] [0]缺少更新条件[C:\xampp\htdocs\thinkphp5\thinkphp\library\think\db\Query.php:2366]
+---------------------------------------------------------------
+[ 2018-08-19T10:47:15+08:00 ] 192.168.1.174 POST /admin.php/admin/payconfig/add.html
+[ info ] test.waibao.com/admin.php/admin/payconfig/add.html [运行时间：0.979056s][吞吐率：1.02req/s] [内存消耗：4,460.43kb] [文件加载：77]
+[ error ] [0]缺少更新条件[C:\xampp\htdocs\thinkphp5\thinkphp\library\think\db\Query.php:2366]
+---------------------------------------------------------------
+[ 2018-08-19T10:48:07+08:00 ] 192.168.1.174 POST /admin.php/admin/payconfig/add.html
+[ info ] test.waibao.com/admin.php/admin/payconfig/add.html [运行时间：1.177067s][吞吐率：0.85req/s] [内存消耗：4,461.08kb] [文件加载：77]
+[ error ] [0]缺少更新条件[C:\xampp\htdocs\thinkphp5\thinkphp\library\think\db\Query.php:2366]
+---------------------------------------------------------------
+[ 2018-08-19T10:48:50+08:00 ] 192.168.1.174 POST /admin.php/admin/payconfig/add.html
+[ info ] test.waibao.com/admin.php/admin/payconfig/add.html [运行时间：1.034059s][吞吐率：0.97req/s] [内存消耗：4,461.08kb] [文件加载：77]
+[ error ] [0]缺少更新条件[C:\xampp\htdocs\thinkphp5\thinkphp\library\think\db\Query.php:2366]
+---------------------------------------------------------------
+[ 2018-08-19T10:49:12+08:00 ] 192.168.1.174 POST /admin.php/admin/payconfig/add.html
+[ info ] test.waibao.com/admin.php/admin/payconfig/add.html [运行时间：1.010058s][吞吐率：0.99req/s] [内存消耗：4,461.09kb] [文件加载：77]
+[ error ] [0]缺少更新条件[C:\xampp\htdocs\thinkphp5\thinkphp\library\think\db\Query.php:2366]
+---------------------------------------------------------------
+[ 2018-08-19T10:50:09+08:00 ] 192.168.1.174 POST /admin.php/admin/payconfig/add.html
+[ info ] test.waibao.com/admin.php/admin/payconfig/add.html [运行时间：1.094062s][吞吐率：0.91req/s] [内存消耗：4,461.09kb] [文件加载：77]
+[ error ] [0]缺少更新条件[C:\xampp\htdocs\thinkphp5\thinkphp\library\think\db\Query.php:2366]
+---------------------------------------------------------------
+[ 2018-08-19T11:17:00+08:00 ] 192.168.1.174 GET /admin.php/admin/order/index
+[ info ] test.waibao.com/admin.php/admin/order/index [运行时间：1.615092s][吞吐率：0.62req/s] [内存消耗：5,182.62kb] [文件加载：90]
+[ error ] [8]未定义变量: v[C:\xampp\htdocs\thinkphp5\runtime\temp\fbb4758d4132af34be64016be253ac6b.php:376]
+---------------------------------------------------------------
+[ 2018-08-19T11:49:03+08:00 ] 192.168.1.174 POST /admin.php/admin/module/design.html
+[ info ] test.waibao.com/admin.php/admin/module/design.html [运行时间：0.510029s][吞吐率：1.96req/s] [内存消耗：4,728.95kb] [文件加载：79]
+[ error ] [2]unlink(C:\xampp\htdocs\thinkphp5/app/game\view\index\index.php): No such file or directory[C:\xampp\htdocs\thinkphp5\app\admin\model\AdminModule.php:226]
+---------------------------------------------------------------
+[ 2018-08-19T12:27:19+08:00 ] 192.168.1.174 GET /index/user/login
+[ info ] test.waibao.com/index/user/login [运行时间：0.572033s][吞吐率：1.75req/s] [内存消耗：3,704.06kb] [文件加载：61]
+[ error ] [0]Class app\index\controller\Request does not exist[C:\xampp\htdocs\thinkphp5\thinkphp\library\think\App.php:401]
+---------------------------------------------------------------
+[ 2018-08-19T12:28:39+08:00 ] 192.168.1.174 GET /index/agent/index
+[ info ] test.waibao.com/index/agent/index [运行时间：0.146008s][吞吐率：6.85req/s] [内存消耗：3,694.50kb] [文件加载：63]
+[ error ] [1]Call to undefined method app\index\controller\Agent::fetch()[C:\xampp\htdocs\thinkphp5\app\index\controller\Agent.php:27]

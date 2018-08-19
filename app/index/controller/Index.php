@@ -29,8 +29,8 @@ class Index extends Common
     public function index()
     {
              //测试Sqlservel链接
-             $test1=Db::connect("db_sqlServer")->name("accountsinfo")->select();
-			 var_dump($test1);
+            // $test1=Db::connect("db_sqlServer")->name("accountsinfo")->select();
+			 //var_dump($test1);
              //测试oracle链接
              //$test2=Db::connect("db_Oracle")->name("accountsinfo")->select();
 

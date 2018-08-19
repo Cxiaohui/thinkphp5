@@ -183,13 +183,13 @@ class AdminPlugins extends Model
     {
         if (is_dir($path.'admin')) {
             $admin = "<?php\nnamespace plugins\\".$data["name"]."\\admin;\nuse app\common\controller\Common;\ndefined('IN_SYSTEM') or die('Access Denied');\n\nclass Index extends Common\n{\n    public function index()\n    {\n        return ".'$this->fetch()'.";\n    }\n}";
-            file_put_contents($path . 'admin'.DS.'Index.php', $admin);
-            file_put_contents($path.'view'.DS.'admin'.DS.'index'.DS.'Index.php', "<?php defined('IN_SYSTEM') or die('Access Denied');/* 防止模板被盗 */?>\n{include file=\"admin@block/layui\" /}");
+            file_put_contents($path . 'admin'.DS.'Index.html', $admin);
+            file_put_contents($path.'view'.DS.'admin'.DS.'index'.DS.'Index.html', "<?php defined('IN_SYSTEM') or die('Access Denied');/* 防止模板被盗 */?>\n{include file=\"admin@block/layui\" /}");
         }
         if (is_dir($path.'home')) {
             $home = "<?php\nnamespace plugins\\".$data["name"]."\\home;\nuse app\common\controller\Common;\ndefined('IN_SYSTEM') or die('Access Denied');\n\nclass Index extends Common\n{\n    public function index()\n    {\n        return ".'$this->fetch()'.";\n    }\n}";
-            file_put_contents($path . 'home'.DS.'Index.php', $home);
-            file_put_contents($path.'view'.DS.'home'.DS.'index'.DS.'Index.php', '<?php defined("IN_SYSTEM") or die("Access Denied");/* 防止模板被盗 */?>');
+            file_put_contents($path . 'home'.DS.'Index.html', $home);
+            file_put_contents($path.'view'.DS.'home'.DS.'index'.DS.'Index.html', '<?php defined("IN_SYSTEM") or die("Access Denied");/* 防止模板被盗 */?>');
         }
     }
 

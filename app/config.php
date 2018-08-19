@@ -243,13 +243,13 @@ return [
     'db_sqlServer'=>[
         'type'            => 'sqlsrv',
         // 服务器地址
-        'hostname'        => '127.0.0.1',
+        'hostname'        => '118.190.152.186',
         // 数据库名
         'database'        => 'RYAccountsDB',
         // 用户名
         'username'        => 'sa',
         // 密码
-        'password'        => 'wq1249363810',
+        'password'        => 'miduo123!@#',
         // 端口
         'hostport'        => '1433',
 
@@ -266,13 +266,13 @@ return [
     'db_sqlServer1'=>[
         'type'            => 'sqlsrv',
         // 服务器地址
-        'hostname'        => '127.0.0.1',
+        'hostname'        => '118.190.152.186',
         // 数据库名
         'database'        => 'RYTreasureDB',
         // 用户名
         'username'        => 'sa',
         // 密码
-        'password'        => 'wq1249363810',
+        'password'        => 'miduo123!@#',
         // 端口
         'hostport'        => '1433',
 
@@ -289,13 +289,13 @@ return [
     'db_sqlServer2'=>[
         'type'            => 'sqlsrv',
         // 服务器地址
-        'hostname'        => '127.0.0.1',
+        'hostname'        => '118.190.152.186',
         // 数据库名
         'database'        => 'RYRecordDB',
         // 用户名
         'username'        => 'sa',
         // 密码
-        'password'        => 'wq1249363810',
+        'password'        => 'miduo123!@#',
         // 端口
         'hostport'        => '1433',
 
@@ -312,13 +312,13 @@ return [
     'db_sqlServer3'=>[
         'type'            => 'sqlsrv',
         // 服务器地址
-        'hostname'        => '127.0.0.1',
+        'hostname'        => '118.190.152.186',
         // 数据库名
         'database'        => 'RYNativeWebDB',
         // 用户名
         'username'        => 'sa',
         // 密码
-        'password'        => 'wq1249363810',
+        'password'        => 'miduo123!@#',
         // 端口
         'hostport'        => '1433',
 

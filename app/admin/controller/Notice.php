@@ -68,11 +68,11 @@ class Notice extends Admin
             ];
             if ($NewsID && !empty($data)) {
                 Db::connect("db_sqlServer3")->name('news')->where("NewsID", '=', $NewsID)->update($data);
-                return json_encode(['status' => 1, 'msg' => "修改成功!"]);
+                $this->success('修改成功。');exit;
             } else if(!empty($data)){
                 $ret_id=Db::connect("db_sqlServer3")->name('news')->insert($data);
                 if ($ret_id > 0) {
-                    return json_encode(['status' => 1, 'msg' => "添加成功!"]);
+                    $this->success('修改成功。');exit;
                 }
             }
         }

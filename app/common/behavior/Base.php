@@ -65,7 +65,7 @@ class Base
         }
         // 获取站点根目录
         $root_dir = request()->baseFile();
-        $root_dir  = preg_replace(['/Index.php$/', '/plugins.php$/', '/'.config('sys.admin_path').'$/'], ['', '', ''], $root_dir);
+        $root_dir  = preg_replace(['/Index.html$/', '/plugins.php$/', '/'.config('sys.admin_path').'$/'], ['', '', ''], $root_dir);
         define('ROOT_DIR', $root_dir);
         $_SERVER['SERVER_NAME'];
 

@@ -34,4 +34,3 @@
 </form>
 {include file="block/layui" /}
 
-<script src="__ADMIN_JS__/footer.js"></script>

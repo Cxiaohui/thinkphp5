@@ -29,10 +29,8 @@ class Payconfig extends Admin
 
     public function index()
     {
-        //保存搜索条件
         $where = [];
-        //实例化需要的表
-        $ob = Db::connect("db_sqlServer3")->name("news")->paginate(10);
+        $ob=Db::connect("db_sqlServer")->name("payconfig")->paginate(10);
         //执行分页查询
         $pages = $ob->render();
         $this->assign('data_list', $ob);
@@ -47,79 +45,52 @@ class Payconfig extends Admin
      */
     public function add()
     {
-        $PopID = $this->request->post("PopID");
-        $Subject = $this->request->post("Subject");
-        $Body = $this->request->post("Body");
+        $Amount = $this->request->post("Amount");
+        $RoomCard = $this->request->post("RoomCard");
+        $GivingProportion = $this->request->post("GivingProportion");
+        $Commission = $this->request->post("Commission");
         //$NewsID =$this->request->post("NewsID");
-        $NewsID =input("NewsID");
+        $ID =input("ID");
         $ret = [];
-        if ($NewsID) {
-            $ret =  Db::connect("db_sqlServer3")->name('news')->where("NewsID", '=', $NewsID)->find();
+        if ($ID) {
+            $ret =  Db::connect("db_sqlServer")->name('payconfig')->where("ID", '=', $ID)->find();
 
         }
-        $data=[];
-        if ($PopID && $Body) {
-            $data = [
-                'PopID' => $PopID,
-                'Subject' => $Subject,
-                'Body' => $Body,
-                'UserID' => 1,
-                'ClassID'=>3
-            ];
-            if ($NewsID && !empty($data)) {
-                Db::connect("db_sqlServer3")->name('news')->where("NewsID", '=', $NewsID)->update($data);
-                return json_encode(['status' => 1, 'msg' => "修改成功!"]);
-            } else if(!empty($data)){
-                $ret_id=Db::connect("db_sqlServer3")->name('news')->insert($data);
-                if ($ret_id > 0) {
-                    return json_encode(['status' => 1, 'msg' => "添加成功!"]);
-                }
+        $hav_ret = Db::connect("db_sqlServer")->name('payconfig')->find();
+
+        $data = [
+            'Amount'=>$Amount,
+            'RoomCard'=>$RoomCard,
+            'GivingProportion'=>$GivingProportion,
+            'Commission'=>$Commission
+        ];
+
+        if ($ID && !empty($Amount) && !empty($RoomCard)) {
+            Db::connect("db_sqlServer")->name('payconfig')->where("ID", '=', $ID)->update($data);
+
+            Db::connect("db_sqlServer")->name('payconfig')->where("ID",">",0)->update(array('GivingProportion'=>$GivingProportion,'Commission'=>$Commission));
+
+             $this->success('修改成功。');exit;
+
+        }else if(!empty($Amount) && !empty($RoomCard)){
+            $id =Db::connect("db_sqlServer")->name('payconfig')->insert($data);
+            if ($id > 0) {
+                //统一修改比例
+                Db::connect("db_sqlServer")->name('payconfig')->where("ID",">",0)->update(['GivingProportion'=>$GivingProportion,'Commission'=>$Commission]);
+                 $this->success('修改成功。');exit;
             }
         }
         $this->assign('ret', $ret);
-
-        return $this->fetch('form');
-
-    }
-
-    /**
-     * 修改会员
-     * @author 橘子俊 <364666827@qq.com>
-     * @return mixed
-     */
-    public function edit($id = 0)
-    {
-        if ($this->request->isPost()) {
-            $data = $this->request->post();
-            if ($data['mobile'] == 0) {
-                unset($data['mobile']);
-            }
-            // 验证
-            $result = $this->validate($data, 'AdminMember.update');
-            if($result !== true) {
-                return $this->error($result);
-            }
-
-            if (isset($data['password']) && empty($data['password'])) {
-                unset($data['password']);
-            }
-
-            if (!MemberModel::update($data)) {
-                return $this->error('修改失败！');
-            }
-            return $this->success('修改成功。');
-        }
-
-        $row = MemberModel::where('id', $id)->field('id,username,level_id,nick,email,mobile,expire_time')->find()->toArray();
-        $this->assign('data_info', $row);
-        $this->assign('level_option', LevelModel::getOption($row['level_id']));
+        $this->assign('hav_ret', $hav_ret);
+        $this->assign('ID', $ID);
         return $this->fetch('form');
     }
+
 
     public function dellevel()
     {
-        $NewsID =input("NewsID");
-        $ret_id=Db::connect("db_sqlServer3")->name('news')->where("NewsID",$NewsID)->delete();
+        $ID =input("ID");
+        $ret_id= Db::connect("db_sqlServer")->name('payconfig')->where("ID",$ID)->delete();
         if ($ret_id<0) {
             return $this->error("删除失败");
         }
