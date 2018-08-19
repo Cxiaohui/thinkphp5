@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:56:"C:\xampp\htdocs\thinkphp5/app/admin\view\index\index.php";i:1534530385;s:51:"C:\xampp\htdocs\thinkphp5\app\admin\view\layout.php";i:1534530385;s:57:"C:\xampp\htdocs\thinkphp5\app\admin\view\block\header.php";i:1534530385;s:55:"C:\xampp\htdocs\thinkphp5\app\admin\view\block\menu.php";i:1534530385;s:56:"C:\xampp\htdocs\thinkphp5\app\admin\view\block\layui.php";i:1534564914;s:57:"C:\xampp\htdocs\thinkphp5\app\admin\view\block\footer.php";i:1534530385;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:56:"C:\xampp\htdocs\thinkphp5/app/admin\view\index\index.php";i:1534643663;s:51:"C:\xampp\htdocs\thinkphp5\app\admin\view\layout.php";i:1534643663;s:57:"C:\xampp\htdocs\thinkphp5\app\admin\view\block\header.php";i:1534643663;s:55:"C:\xampp\htdocs\thinkphp5\app\admin\view\block\menu.php";i:1534643663;s:56:"C:\xampp\htdocs\thinkphp5\app\admin\view\block\layui.php";i:1534643663;s:57:"C:\xampp\htdocs\thinkphp5\app\admin\view\block\footer.php";i:1534643663;}*/ ?>
 <?php if(input('param.hisi_iframe') || cookie('hisi_iframe')): ?>
 <!DOCTYPE html>
 <html>

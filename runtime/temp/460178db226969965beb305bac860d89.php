@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:57:"C:\xampp\htdocs\thinkphp5/app/admin\view\index\iframe.php";i:1534530385;s:55:"C:\xampp\htdocs\thinkphp5\app\admin\view\block\menu.php";i:1534530385;s:56:"C:\xampp\htdocs\thinkphp5\app\admin\view\block\layui.php";i:1534564914;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:57:"C:\xampp\htdocs\thinkphp5/app/admin\view\index\iframe.php";i:1534643663;s:55:"C:\xampp\htdocs\thinkphp5\app\admin\view\block\menu.php";i:1534643663;s:56:"C:\xampp\htdocs\thinkphp5\app\admin\view\block\layui.php";i:1534643663;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>

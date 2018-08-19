@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"C:\xampp\htdocs\thinkphp5\plugins/hisiphp/view/widget/systeminfo.php";i:1534530385;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"C:\xampp\htdocs\thinkphp5\plugins/hisiphp/view/widget/systeminfo.php";i:1534643663;}*/ ?>
 <div class="fl" style="width:49%">
     <table class="layui-table" lay-skin="line">
         <colgroup>

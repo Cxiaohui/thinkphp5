@@ -1,0 +1,4 @@
+---------------------------------------------------------------
+[ 2018-08-19T09:55:00+08:00 ] 192.168.1.174 GET /admin.php/admin/notice/index
+[ info ] test.waibao.com/admin.php/admin/notice/index [运行时间：0.800046s][吞吐率：1.25req/s] [内存消耗：4,863.39kb] [文件加载：84]
+[ error ] [28000]SQLSTATE[28000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]用户 'sa' 登录失败。[C:\xampp\htdocs\thinkphp5\thinkphp\library\think\db\Connection.php:295]
