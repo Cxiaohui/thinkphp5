@@ -4,15 +4,14 @@
         <div class="layui-form-item">
             <label ><input class="layui-form-label" type="submit"></label>
             <div class="layui-input-inline">
-                <input type="text" name="q" value="{:input('get.q')}" lay-verify="required" placeholder="游戏ID,订单号" autocomplete="off" class="layui-input">
+                <input type="text" name="q" value="{:input('get.q')}" lay-verify="required" placeholder="游戏ID,用户名" autocomplete="off" class="layui-input">
 
             </div>
             <div class="layui-input-inline">
             <select name="Status">
                 <option value ="" >全部</option>
-                <option value ="2">已完成</option>
-                <option value ="1">待处理</option>
-                <option value ="0">未支付</option>
+                <option value ="1">已审核</option>
+                <option value ="0">未审核</option>
             </select>
             </div>
         </div>

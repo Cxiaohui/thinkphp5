@@ -34,10 +34,9 @@ class Order extends Admin
                 $map['NickName'] = ['like', '%'.$q.'%'];
             }
         }
-        if ($OrderStatus) {
-                $map['OrderStatus'] = $OrderStatus;
+        if($OrderStatus !='') {
+            $map['OrderStatus'] = $OrderStatus;
         }
-
         //保存搜索条件
         $where = [];
         //实例化需要的表
@@ -54,20 +53,20 @@ class Order extends Admin
      *
      * @return mixed
      */
-    public function apply($q='',$OrderStatus='')
+    public function apply($q='',$Status='')
     {
         $map = [];
         if ($q) {
             if (is_numeric( $q ) ) {
                 $map['GameID'] = $q;
             } else {// 用户名、昵称
-                $map['NickName'] = ['like', '%'.$q.'%'];
+                $map['UserName'] = ['like', '%'.$q.'%'];
             }
         }
-        if ($OrderStatus) {
-            $map['OrderStatus'] = $OrderStatus;
-        }
 
+       if($Status !=''){
+           $map['Status'] = $Status;
+       }
         //保存搜索条件
         $where = [];
         //实例化需要的表
