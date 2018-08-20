@@ -20,8 +20,8 @@ use think\DB;
 class Order extends Admin
 {
     /**
-     * 公告列表
-     * @author 橘子俊 <364666827@qq.com>
+     * 订单列表
+     *
      * @return mixed
      */
     public function index($q='',$OrderStatus='')
@@ -48,6 +48,55 @@ class Order extends Admin
         $this->assign('pages', $pages);
         // 加载模板的同时，把查询的数据，以及分页时需要携带的参数传到模板上
         return $this->fetch();
+    }
+    /**
+     * 提现申请
+     *
+     * @return mixed
+     */
+    public function apply($q='',$OrderStatus='')
+    {
+        $map = [];
+        if ($q) {
+            if (is_numeric( $q ) ) {
+                $map['GameID'] = $q;
+            } else {// 用户名、昵称
+                $map['NickName'] = ['like', '%'.$q.'%'];
+            }
+        }
+        if ($OrderStatus) {
+            $map['OrderStatus'] = $OrderStatus;
+        }
+
+        //保存搜索条件
+        $where = [];
+        //实例化需要的表
+        $ob = Db::connect("db_sqlServer")->name("accountsbonuslog")->where($map)->paginate(10);
+        //执行分页查询
+        $pages = $ob->render();
+        $this->assign('data_list', $ob);
+        $this->assign('pages', $pages);
+        // 加载模板的同时，把查询的数据，以及分页时需要携带的参数传到模板上
+        return $this->fetch();
+    }
+
+    /**
+     * 提现申请
+     *
+     * @return mixed
+     */
+    public function updatestatus($ID='')
+    {
+        if ($ID) {
+            $data['Status'] = 1;
+        }
+        $ob = Db::connect("db_sqlServer")->name("accountsbonuslog")->where("ID",$ID)->update($data);
+        if ($ob === false) {
+            return $this->error('审核失败');
+        }
+        return $this->success('审核成功成功');
+
+       return $this->fetch();
     }
 
 }
